@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from hexmodal.views import PayloadView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('payload/', PayloadView.as_view())
 ]
